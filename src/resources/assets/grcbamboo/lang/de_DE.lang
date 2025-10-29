@@ -1,0 +1,26 @@
+# Creative Tabs
+itemGroup.creative_tab_grcbamboo=Growthcraft Bambus
+# Blocks
+tile.grc.bambooBlock.name=Bambus
+tile.grc.bambooDoor.name=Bambustür
+tile.grc.bambooFence.name=Bambuszaun
+tile.grc.bambooFenceGate.name=Bambuszauntor
+tile.grc.bambooFenceRope.name=Bambuszauntor mit Seil
+tile.grc.bambooLeaves.name=Bambusblätter
+tile.grc.bambooScaffold.name=Bambus-Gerüst
+tile.grc.bambooShoot.name=Bambusspross
+tile.grc.bambooSlab.name=Bambusstufe
+tile.grc.bambooStairs.name=Bambustreppe
+tile.grc.bambooStalk.name=Bambus
+tile.grc.bambooWall.name=Bambuswand
+
+# Items
+item.grc.bamboo.name=Bambus
+item.grc.bambooDoor.name=Bambustür
+item.grc.bambooSlab.name=Bambusstufe
+item.grc.bambooRaft.name=Bambusfloß
+item.grc.bambooCoal.name=Bambus-Kohle
+item.grc.bambooShootFood.name=Bambusspross
+
+# Entities
+entity.Growthcraft|Bamboo.bambooRaft.name=Bambusfloß

@@ -1,0 +1,44 @@
+# Creative Tabs
+itemGroup.creative_tab_grcgrapes=Growthcraft Trauben
+
+# Blocks
+tile.grc.grapeVine0.name=Weinrebe Stamm
+tile.grc.grapeVine1.name=Weinrebe Stamm
+tile.grc.grapeLeaves.name=Weinblätter
+tile.grc.grapeBlock.name=Weintraube
+
+# Items
+item.grc.grapes.purple.name=Weintraube
+item.grc.grapes.green.name=Weiße Weintraube
+item.grc.grapes.red.name=Rote Weintraube
+item.grc.grapeSeeds.name=Traubensamen
+
+# Fluids
+fluid.grc.grapeWine0=Wein
+fluid.grc.grapeWine1=Wein
+fluid.grc.grapeWine2=Wein
+fluid.grc.grapeWine3=Wein
+fluid.grc.grapeWine4=Ambrosia
+fluid.grc.grapeWine5=Portwein
+fluid.grc.grapeWine6=Wein
+fluid.grc.grapeWine7=Wein
+
+# Fluid Buckets
+item.bucket.fluid.grc.grapeWine0.name=Eimer mit Traubensaft
+item.bucket.fluid.grc.grapeWine1.name=Eimer mit Wein
+item.bucket.fluid.grc.grapeWine2.name=Eimer mit Wein
+item.bucket.fluid.grc.grapeWine3.name=Eimer mit Wein
+item.bucket.fluid.grc.grapeWine4.name=Eimer mit Ambrosia
+item.bucket.fluid.grc.grapeWine5.name=Eimer mit Portwein
+item.bucket.fluid.grc.grapeWine6.name=Eimer mit Wein
+item.bucket.fluid.grc.grapeWine7.name=Eimer mit Wein
+
+# Fluid Blocks
+tile.fluid.grc.grapeWine0.name=Traubensaft
+tile.fluid.grc.grapeWine1.name=Wein
+tile.fluid.grc.grapeWine2.name=Wein
+tile.fluid.grc.grapeWine3.name=Wein
+tile.fluid.grc.grapeWine4.name=Ambrosia
+tile.fluid.grc.grapeWine5.name=Portwein
+tile.fluid.grc.grapeWine6.name=Wein
+tile.fluid.grc.grapeWine7.name=Wein

@@ -23,7 +23,7 @@
  */
 package growthcraft.api.core.stats;
 
-import net.minecraft.entity.player.EntityPlayer;
+		import net.minecraft.entity.player.EntityPlayer;
 
 public interface IAchievement
 {

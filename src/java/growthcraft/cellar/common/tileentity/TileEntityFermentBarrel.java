@@ -236,6 +236,12 @@ public class TileEntityFermentBarrel extends TileEntityCellarDevice implements I
 			if (canFerment())
 			{
 				this.time++;
+				// Keep active progress eligible for normal world saves without
+				// dirtying the containing chunk on every single tick.
+				if (time % 20 == 0)
+				{
+					markDirty();
+				}
 
 				if (time >= getTimeMax())
 				{

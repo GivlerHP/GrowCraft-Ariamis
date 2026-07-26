@@ -28,6 +28,9 @@ import growthcraft.api.cellar.CellarRegistry;
 import growthcraft.api.core.CoreRegistry;
 import growthcraft.cellar.event.EventBarrelDrained;
 import growthcraft.cellar.stats.CellarAchievement;
+import minefantasy.mf2.achievement.AchievementRegistry;
+import minefantasy.mf2.achievement.AchievementType;
+import cpw.mods.fml.common.Loader;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
@@ -42,7 +45,9 @@ public class EventHandlerBarrelDrainedCellar
 			{
 				if (CoreRegistry.instance().fluidDictionary().hasFluidTags(event.fluid.getFluid(), BoozeTag.FERMENTED))
 				{
-					CellarAchievement.FERMENT_BOOZE.unlock(event.player);
+					if(Loader.isModLoaded("minefantasy2")) {
+					AchievementRegistry.unlock(AchievementType.GROWTHCRAFT_FERMENT_BOOZE, event.player);
+					}
 				}
 			}
 		}

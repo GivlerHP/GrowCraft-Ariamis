@@ -36,37 +36,11 @@ import net.minecraft.stats.Achievement;
 public class GrcCoreAchievements
 {
 	private static final Achievement NO_ACHIEVEMENT = (Achievement)null;
-
-	private final Map<CoreAchievement, Achievement> achievements = new EnumMap<CoreAchievement, Achievement>(CoreAchievement.class);
+	private final Map<CoreAchievement, Achievement> achievements =
+			new EnumMap<>(CoreAchievement.class);
 
 	public GrcCoreAchievements()
 	{
-		achievements.put(CoreAchievement.TRUSTY_HARDWARE,
-			(new Achievement("grc.achievement.trusty_hardware", "trusty_hardware",
-				-4, 0,
-				GrowthCraftCore.items.crowbar.asStack(),
-				NO_ACHIEVEMENT)
-			).initIndependentStat().registerStat()
-		);
-		achievements.put(CoreAchievement.HALF_LIFE_CONFIRMED,
-			(new Achievement("grc.achievement.half_life_confirmed", "half_life_confirmed",
-				-2, 0,
-				EnumSkull.ZOMBIE.asStack(),
-				achievements.get(CoreAchievement.TRUSTY_HARDWARE))
-			).registerStat()
-		);
-		achievements.put(CoreAchievement.SALTY_SITUATION,
-			(new Achievement("grc.achievement.salty_situation", "salty_situation",
-				2, 0,
-				GrowthCraftCore.items.saltBucket.asStack(),
-				NO_ACHIEVEMENT)
-			).registerStat()
-		);
-
-		for (Achievement a : achievements.values())
-		{
-			AchievementPageGrowthcraft.masterList.add(a);
-		}
 	}
 
 	public void unlock(CoreAchievement a, EntityPlayer player)

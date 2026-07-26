@@ -24,6 +24,5 @@ public class AchievementPageGrowthcraft
 		}
 
 		masterPage = new AchievementPage(GrcI18n.translate("achievementPage.pageGrowthCraft"), chievList);
-		AchievementPage.registerAchievementPage(masterPage);
 	}
 }

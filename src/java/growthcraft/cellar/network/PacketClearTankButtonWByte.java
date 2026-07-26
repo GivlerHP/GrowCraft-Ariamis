@@ -1,12 +1,11 @@
 package growthcraft.cellar.network;
 
-import growthcraft.cellar.common.tileentity.TileEntityCellarDevice;
+import growthcraft.cellar.common.inventory.ContainerBrewKettle;
+import growthcraft.cellar.common.tileentity.TileEntityBrewKettle;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
 
 public class PacketClearTankButtonWByte extends AbstractPacketButton
 {
@@ -43,19 +42,17 @@ public class PacketClearTankButtonWByte extends AbstractPacketButton
 	@Override
 	public void handleServerSide(EntityPlayer player)
 	{
-		final World world = player.worldObj;
-		final TileEntity te = world.getTileEntity(xCoord, yCoord, zCoord);
-
-		if (te instanceof TileEntityCellarDevice)
+		final TileEntityBrewKettle device =
+			getOpenDevice(player, ContainerBrewKettle.class, TileEntityBrewKettle.class);
+		if (device == null)
 		{
-			if (b == 0)
-			{
-				((TileEntityCellarDevice)te).clearTank(0);
-			}
-			else if (b == 1)
-			{
-				((TileEntityCellarDevice)te).clearTank(1);
-			}
+			return;
+		}
+
+		if (b == 0 || b == 1)
+		{
+			device.clearTank(b);
+			device.markDirtyAndUpdate();
 		}
 	}
 }

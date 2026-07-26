@@ -5,14 +5,13 @@ buildscript {
             name = "forge"
             url = "https://maven.minecraftforge.net/"
         }
-
         maven {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
     dependencies {
-        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
             changing = true
         }
     }
@@ -108,10 +107,7 @@ repositories {
         name = "forge"
         url = "http://files.minecraftforge.net/maven"
     }
-    maven {
-        name "mobius"
-        url "http://mobiusstrip.eu/maven"
-    }
+ 
     maven {
         name = "CurseMaven"
         url = "https://cursemaven.com"
@@ -135,8 +131,9 @@ dependencies {
     //compile "com.mod-buildcraft:buildcraft:${bc_version}:dev"
     compile "curse.maven:buildcraft-61811:2322106"
     testCompile "junit:junit:4.11"
-    compile files('libs/MoreBeyondOrdinary-1.5.5.jar') //geckolib-unofficial-1.7.10-1.0.3-dev
-    compile files('libs/geckolib-unofficial-1.7.10-1.0.3-dev.jar') 
+    compile files('libs/MoreBeyondOrdinary-1.7.1-deobf.jar') //geckolib-unofficial-1.7.10-1.0.3-dev
+    compile files('libs/geckolib-unofficial-1.7.10-1.0.3-dev.jar')
+    compile files('libs/MF2-2.10.8.1-deobf.jar')
 }
 
 runClient {

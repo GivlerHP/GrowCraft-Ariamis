@@ -32,6 +32,9 @@ public class GrcCellarConfig extends ConfigBase
 	@ConfigOption(catergory="Booze/Effects", name="Enabled", desc="Should extra booze effects be enabled (does not affect tipsy)?")
 	public boolean boozeEffectsEnabled = true;
 
+	@ConfigOption(catergory="Booze/Effects", name="Tipsy Chat", desc="Should tipsy players slur their public chat messages?")
+	public boolean tipsyChatEnabled = true;
+
 
 	@ConfigOption(catergory="Fermenting Barrel", name="Ferment Barrel fermenting time", desc="[Higher -> Slower]")
 	public int fermentTime = 24000;

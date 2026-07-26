@@ -9,6 +9,13 @@ import growthcraft.cellar.common.tileentity.TileEntityBrewKettle;
 import growthcraft.cellar.GrowthCraftCellar;
 import growthcraft.core.Utils;
 
+import cpw.mods.fml.common.Loader;
+import minefantasy.mf2.api.knowledge.ResearchLogic;
+import minefantasy.mf2.knowledge.KnowledgeListMF;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.StatCollector;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
@@ -60,6 +67,22 @@ public class BlockBrewKettle extends BlockCellarContainer
 			}
 		}
 		super.fillWithRain(world, x, y, z);
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+	{
+		if (Loader.isModLoaded("minefantasy2"))
+		{
+			if (!ResearchLogic.hasInfoUnlocked(player, KnowledgeListMF.GrowthCraftKettle))
+			{
+				if (world.isRemote)
+					player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("knowledge.unknownUse")));
+				return false;
+			}
+		}
+		if (super.onBlockActivated(world, x, y, z, player, side, hitX, hitY, hitZ)) return true;
+		return false;
 	}
 
 	@Override

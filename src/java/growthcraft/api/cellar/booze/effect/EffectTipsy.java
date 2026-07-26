@@ -26,10 +26,13 @@ package growthcraft.api.cellar.booze.effect;
 import java.util.Random;
 import java.util.List;
 
+import cpw.mods.fml.common.Loader;
 import growthcraft.api.core.effect.AbstractEffect;
 import growthcraft.api.core.i18n.GrcI18n;
 import growthcraft.api.core.stats.IAchievement;
 
+import minefantasy.mf2.achievement.AchievementRegistry;
+import minefantasy.mf2.achievement.AchievementType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -114,7 +117,11 @@ public class EffectTipsy extends AbstractEffect
 			if (entitylb instanceof EntityPlayer)
 			{
 				final EntityPlayer player = (EntityPlayer)entitylb;
-				if (amplifier >= 4) achievement.addStat(player, 1);
+				if (amplifier >= 4) {
+					if(Loader.isModLoaded("minefantasy2")) {
+						AchievementRegistry.unlock(AchievementType.GROWTHCRAFT_GET_DRUNK, player);
+					}
+				}
 			}
 		}
 	}

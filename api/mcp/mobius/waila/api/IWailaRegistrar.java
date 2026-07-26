@@ -1,5 +1,6 @@
 package mcp.mobius.waila.api;
 
+
 /**
  * Main registration interface. An instance will be provided to a method specified in an IMC msg formatted as follow<br>
  * FMLInterModComms.sendMessage("Waila", "register", "fully.qualified.path.to.registration.method");<br>
@@ -29,7 +30,7 @@ public interface IWailaRegistrar {
 	public void addConfigRemote(String modname, String keyname, boolean defvalue);
 	
 	/* Register a stack overrider for the given blockID */
-	public void registerStackProvider(IWailaDataProvider dataProvider, Class block);	
+	public void registerStackProvider(IWailaDataProvider dataProvider, Class block);
 	
 	/* Same thing, but works on a class hierarchy instead */
 	public void registerHeadProvider (IWailaDataProvider dataProvider, Class block);

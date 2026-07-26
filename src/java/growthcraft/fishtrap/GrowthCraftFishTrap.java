@@ -106,7 +106,7 @@ public class GrowthCraftFishTrap
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.leather_boots), 5).setDamage(0.9F));
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.leather), 5));
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.bone), 5));
-		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.potionitem), 3));
+		//userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.potionitem), 3));
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.string), 5));
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.fishing_rod), 2).setDamage(0.9F));
 		userFishTrapConfig.addDefault("junk", new FishTrapEntry(new ItemStack(Items.bowl), 5));
@@ -117,9 +117,9 @@ public class GrowthCraftFishTrap
 		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Blocks.waterlily), 3));
 		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.name_tag), 1));
 		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.saddle), 1));
-		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.bow), 1).setDamage(0.25F).setEnchantable());
-		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.fishing_rod), 1).setDamage(0.25F).setEnchantable());
-		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.book), 1).setEnchantable());
+		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.bow), 1).setDamage(0.25F));
+		userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.fishing_rod), 1).setDamage(0.25F));
+		//userFishTrapConfig.addDefault("treasure", new FishTrapEntry(new ItemStack(Items.book), 1).setEnchantable());
 		// Fishes
 		userFishTrapConfig.addDefault("fish", new FishTrapEntry(new ItemStack(Items.fish, 1, ItemFishFood.FishType.COD.func_150976_a()), 60));
 		userFishTrapConfig.addDefault("fish", new FishTrapEntry(new ItemStack(Items.fish, 1, ItemFishFood.FishType.SALMON.func_150976_a()), 25));
@@ -131,7 +131,7 @@ public class GrowthCraftFishTrap
 		userFishTrapConfig.addDefault("mineral", new FishTrapEntry(new ItemStack(Items.gold_nugget), 5));
 		// Legendary
 		userFishTrapConfig.addDefault("legendary", new FishTrapEntry(new ItemStack(Items.gold_ingot), 1));
-		userFishTrapConfig.addDefault("legendary", new FishTrapEntry(new ItemStack(Items.diamond), 10));
+		userFishTrapConfig.addDefault("legendary", new FishTrapEntry(new ItemStack(Items.diamond), 1));
 
 		//====================
 		// CRAFTING

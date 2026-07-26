@@ -7,6 +7,13 @@ import growthcraft.cellar.common.tileentity.TileEntityFruitPress;
 import growthcraft.cellar.GrowthCraftCellar;
 import growthcraft.api.core.util.BlockFlags;
 
+import cpw.mods.fml.common.Loader;
+import minefantasy.mf2.api.knowledge.ResearchLogic;
+import minefantasy.mf2.knowledge.KnowledgeListMF;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.StatCollector;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -60,6 +67,22 @@ public class BlockFruitPress extends BlockCellarContainer
 		super.onBlockAdded(world, x, y, z);
 		this.setDefaultDirection(world, x, y, z);
 		world.setBlock(x, y + 1, z, getPresserBlock(), world.getBlockMetadata(x, y, z), 2);
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+	{
+		if (Loader.isModLoaded("minefantasy2"))
+		{
+			if (!ResearchLogic.hasInfoUnlocked(player, KnowledgeListMF.GrowthCraftPress))
+			{
+				if (world.isRemote)
+					player.addChatMessage(new ChatComponentText(StatCollector.translateToLocal("knowledge.unknownUse")));
+				return false;
+			}
+		}
+		if (super.onBlockActivated(world, x, y, z, player, side, hitX, hitY, hitZ)) return true;
+		return false;
 	}
 
 	private void setDefaultDirection(World world, int x, int y, int z)

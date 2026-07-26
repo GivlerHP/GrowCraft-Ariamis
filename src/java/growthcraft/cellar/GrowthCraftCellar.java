@@ -29,6 +29,7 @@ import growthcraft.cellar.creativetab.CreativeTabsCellar;
 import growthcraft.cellar.eventhandler.EventHandlerCauldronUseItem;
 import growthcraft.cellar.eventhandler.EventHandlerItemCraftedEventCellar;
 import growthcraft.cellar.eventhandler.EventHandlerLivingUpdateEventCellar;
+import growthcraft.cellar.eventhandler.EventHandlerTipsyChat;
 import growthcraft.cellar.init.GrcCellarBlocks;
 import growthcraft.cellar.init.GrcCellarItems;
 import growthcraft.cellar.network.PacketPipeline;
@@ -218,12 +219,11 @@ public class GrowthCraftCellar
 		extendPotionsArray();
 		potionTipsy = (new PotionCellar(config.potionTipsyID, false, 0)).setIconIndex(0, 0).setPotionName("grc.potion.tipsy");
 		EffectTipsy.potionTipsy = potionTipsy;
-		EffectTipsy.achievement = CellarAchievement.GET_DRUNK;
+
 
 		//====================
 		// ACHIEVEMENTS
 		//====================
-		achievements = new GrcCellarAchievements();
 
 		NEI.hideItem(items.chievItemDummy.asStack());
 	}
@@ -305,6 +305,7 @@ public class GrowthCraftCellar
 		packetPipeline.postInitialise();
 		FMLCommonHandler.instance().bus().register(new EventHandlerItemCraftedEventCellar());
 		MinecraftForge.EVENT_BUS.register(new EventHandlerLivingUpdateEventCellar());
+		MinecraftForge.EVENT_BUS.register(new EventHandlerTipsyChat());
 		MinecraftForge.EVENT_BUS.register(new EventHandlerCauldronUseItem());
 
 		modules.postInit();

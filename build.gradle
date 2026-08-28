@@ -11,7 +11,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.0.+') {
+        classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
             changing = true
         }
     }
@@ -22,6 +22,7 @@ apply plugin: "checkstyle"
 
 checkstyle {
     toolVersion = "6.11.2"
+    configDirectory.set(file("$rootDir/checkstyle"))
     configFile = new File(rootDir, "checkstyle/checkstyle.xml")
 }
 
@@ -32,7 +33,7 @@ version = "${minecraft_version}-${growthcraft_version}"
 group = "mod.growthcraft"
 archivesBaseName = "growthcraft"
 
-ext.growthcraftApi = "src/java/growthcraft/api"
+ext.growthcraftApi = "src/main/java/growthcraft/api"
 ext.forestryApiRoot = "api/ForestryAPI"
 
 class StructExtApi {
@@ -62,14 +63,6 @@ minecraft {
 }
 
 sourceSets {
-    main {
-        java {
-            srcDir "src/java"
-        }
-        resources {
-            srcDir "src/resources"
-        }
-    }
     api {
         java {
             srcDir project.growthcraftApi
@@ -78,9 +71,23 @@ sourceSets {
             }
         }
     }
+    main {
+        java {
+            // Growthcraft's public API is compiled by the dedicated api
+            // source set and then bundled into the complete jar once.
+            exclude "growthcraft/api/**"
+        }
+        compileClasspath += sourceSets.api.output
+        runtimeClasspath += sourceSets.api.output
+    }
+    test {
+        compileClasspath += sourceSets.api.output
+        runtimeClasspath += sourceSets.api.output
+    }
 }
 
 processResources {
+    duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
     from(sourceSets.main.resources.srcDirs) {
@@ -97,43 +104,37 @@ repositories {
     mavenCentral()
     maven {
         name "applecore"
-        url "http://www.ryanliptak.com/maven/"
+        url "https://www.ryanliptak.com/maven/"
     }
     maven {
         name "chickenbones"
-        url "http://chickenbones.net/maven/"
+        url "https://chickenbones.net/maven/"
     }
     maven {
         name = "forge"
-        url = "http://files.minecraftforge.net/maven"
+        url = "https://maven.minecraftforge.net/"
     }
  
     maven {
         name = "CurseMaven"
         url = "https://cursemaven.com"
     }
-    ivy {
-        name "buildcraft"
-        artifactPattern "http://www.mod-buildcraft.com/releases/BuildCraft/[revision]/[module]-[revision]-[classifier].[ext]"
-    }
-    
-    
 }
 
 dependencies {
-    compile "applecore:AppleCore:${minecraft_version}-${applecore_version}:api"
-    //compile "mcp.mobius.waila:Waila:${waila_version}_${minecraft_version}:dev"
-    compile "codechicken:CodeChickenLib:${minecraft_version}-${code_chicken_lib_version}:dev"
-    compile "codechicken:CodeChickenCore:${minecraft_version}-${code_chicken_core_version}:dev"
-    compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
-    compile "curse.maven:thaumcraft-223628:2227552"
-    compile "curse.maven:forestry-59751:2333823"
-    //compile "com.mod-buildcraft:buildcraft:${bc_version}:dev"
-    compile "curse.maven:buildcraft-61811:2322106"
-    testCompile "junit:junit:4.11"
-    compile files('libs/MoreBeyondOrdinary-1.7.1-deobf.jar') //geckolib-unofficial-1.7.10-1.0.3-dev
-    compile files('libs/geckolib-unofficial-1.7.10-1.0.3-dev.jar')
-    compile files('libs/MF2-2.10.8.1-deobf.jar')
+    implementation "applecore:AppleCore:${minecraft_version}-${applecore_version}:api"
+    //implementation "mcp.mobius.waila:Waila:${waila_version}_${minecraft_version}:dev"
+    implementation "codechicken:CodeChickenLib:${minecraft_version}-${code_chicken_lib_version}:dev"
+    implementation "codechicken:CodeChickenCore:${minecraft_version}-${code_chicken_core_version}:dev"
+    implementation "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:dev"
+    implementation "curse.maven:thaumcraft-223628:2227552"
+    implementation "curse.maven:forestry-59751:2333823"
+    //implementation "com.mod-buildcraft:buildcraft:${bc_version}:dev"
+    implementation "curse.maven:buildcraft-61811:2322106"
+    testImplementation "junit:junit:4.11"
+    implementation files('libs/MoreBeyondOrdinary-1.7.1-deobf.jar') //geckolib-unofficial-1.7.10-1.0.3-dev
+    implementation files('libs/geckolib-unofficial-1.7.10-1.0.3-dev.jar')
+    implementation files('libs/MF2-2.10.8.1-deobf.jar')
 }
 
 runClient {
@@ -157,13 +158,14 @@ tasks.withType(JavaCompile) {
 }
 
 task sourceJar(type: Jar) {
+    duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
     from sourceSets.main.allSource
     from(sourceSets.api.allSource) {
         for (StructExtApi entry in apis) {
             exclude entry.exclusion
         }
     }
-    classifier = "sources"
+    archiveClassifier.set("sources")
 }
 
 javadoc {
@@ -175,7 +177,7 @@ javadoc {
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = "javadoc"
+    archiveClassifier.set("javadoc")
     from "build/docs/javadoc"
 }
 
@@ -186,7 +188,7 @@ task deobfJar(type: Jar) {
             exclude api.exclusion
         }
     }
-    classifier = "deobf"
+    archiveClassifier.set("deobf")
 }
 
 task apiJar(type: Jar) {
@@ -195,11 +197,11 @@ task apiJar(type: Jar) {
             exclude api.exclusion
         }
     }
-    classifier = "api"
+    archiveClassifier.set("api")
 }
 
 jar {
-    classifier = "complete"
+    archiveClassifier.set("complete")
     from(sourceSets.api.output) {
         for (StructExtApi api in apis) {
             exclude api.exclusion

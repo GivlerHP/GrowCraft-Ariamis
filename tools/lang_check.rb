@@ -10,7 +10,7 @@ end
 base_lang_name = 'en_US'
 Dir.chdir File.expand_path('../', File.dirname(__FILE__)) do
   root_path = Dir.getwd
-  Dir.chdir 'src/resources/assets' do
+  Dir.chdir 'src/main/resources/assets' do
     modules = ARGV.presence || Dir.glob("./*").select { |d| File.directory?(d) }.map { |d| File.basename(d) }
 
     languages = Dir.glob("**/*.lang").map { |fn| File.basename(fn, ".lang") }.uniq.sort

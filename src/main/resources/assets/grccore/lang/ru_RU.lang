@@ -1,0 +1,135 @@
+# Creative Tabs
+itemGroup.creative_tab_grccore=Growthcraft
+
+# Blocks
+tile.grc.etfuturum_fence_rope_acacia.name=Забор с верёвкой (Акация)
+tile.grc.etfuturum_fence_rope_birch.name=Забор с верёвкой (Берёзовый)
+tile.grc.etfuturum_fence_rope_dark_oak.name=Забор с верёвкой (Тёмный дуб)
+tile.grc.etfuturum_fence_rope_jungle.name=Забор с верёвкой (Тропический)
+tile.grc.etfuturum_fence_rope_oak.name=Забор с верёвкой (Дубовый)
+tile.grc.etfuturum_fence_rope_spruce.name=Забор с верёвкой (Еловый)
+tile.grc.fenceRope.name=Забор с верёвкой
+tile.grc.netherBrickFenceRope.name=Забор с верёвкой (Адский)
+tile.grc.naturaFenceRope.name=Забор с верёвкой (%s)
+tile.grc.ropeBlock.name=Верёвка
+tile.grccore.salt_block.name=Блок соли
+
+# Items
+item.grc.rope.name=Верёвка
+item.grccore.salt.name=Соль
+item.grccore.bucketSalt.name=Ведро соли
+item.grccore.bottleSalt.name=Бутылка соли
+item.grccore.crowbar.black.name=Монтировка (Чёрная)
+item.grccore.crowbar.red.name=Монтировка (Красная)
+item.grccore.crowbar.green.name=Монтировка (Зелёная)
+item.grccore.crowbar.brown.name=Монтировка (Коричневая)
+item.grccore.crowbar.blue.name=Монтировка (Синяя)
+item.grccore.crowbar.purple.name=Монтировка (Фиолетовая)
+item.grccore.crowbar.cyan.name=Монтировка (Бирюзовая)
+item.grccore.crowbar.light_gray.name=Монтировка (Светло-серая)
+item.grccore.crowbar.gray.name=Монтировка (Серая)
+item.grccore.crowbar.pink.name=Монтировка (Розовая)
+item.grccore.crowbar.lime.name=Монтировка (Лаймовая)
+item.grccore.crowbar.yellow.name=Монтировка (Жёлтая)
+item.grccore.crowbar.light_blue.name=Монтировка (Голубая)
+item.grccore.crowbar.magenta.name=Монтировка (Пурпурная)
+item.grccore.crowbar.orange.name=Монтировка (Оранжевая)
+item.grccore.crowbar.white.name=Монтировка (Белая)
+
+# Fluids
+fluid.tile.water=Вода
+fluid.tile.lava=Лава
+
+## Salt Water
+fluid.grccore.SaltWater=Солёная вода
+tile.grccore.BlockFluidSaltWater.name=Солёная вода
+item.grccore.BottleFluidSaltWater.name=Бутылка солёной воды
+item.bucket.fluid.grccore.SaltWater.name=Ведро солёной воды
+
+# Other
+achievementPage.pageGrowthCraft=Growthcraft
+
+# Colors
+grc.color.Black=Чёрный
+grc.color.Blue=Синий
+grc.color.Brown=Коричневый
+grc.color.Cyan=Бирюзовый
+grc.color.Gray=Серый
+grc.color.Green=Зелёный
+grc.color.LightBlue=Голубой
+grc.color.LightGray=Светло-серый
+grc.color.Lime=Лаймовый
+grc.color.Magenta=Пурпурный
+grc.color.Orange=Оранжевый
+grc.color.Pink=Розовый
+grc.color.Purple=Фиолетовый
+grc.color.Red=Красный
+grc.color.Transparent=Прозрачный
+grc.color.White=Белый
+grc.color.Yellow=Жёлтый
+
+# Formats and Units
+grc.format.value.true=ДА
+grc.format.value.false=НЕТ
+grc.format.state.true=ВКЛ.
+grc.format.state.false=ВЫКЛ.
+grc.format.invalid_fluid=<Недействительная жидкость>
+# Displayed for items
+grc.format.itemslot.empty=<Пусто>
+grc.format.itemslot.invalid=<Недействительный предмет>
+
+# Modifier name
+grc.format.booze.name=%2$s %1$s
+
+# When a fluid is not a booze
+grc.format.fluid.name=%1$s
+
+# Name (stack_size)
+grc.format.itemslot.item=%s (x%d)
+# Displayed for tile entities with multiple tanks, %d is the tank index + 1
+grc.format.tank_id=Резервуар %d:
+# When the tank is empty
+grc.format.tank.empty=<Пусто>
+# %s is the fluid name
+grc.format.tank.content_suffix=мВ %s
+
+# Waila Tooltips
+grc.format.crop.growth_prefix=Рост:
+grc.format.crop.mature=Выросло
+grc.format.crop.progress_format=%d%%
+grc.format.paddy.hasFluid=Есть жидкость:
+grccore.device.heated.multiplier.format= %d%%
+grccore.device.heated.prefix=Нагрев:
+grccore.device.heated.state.false= <Холодный>
+grccore.device.progress.format= %d%%
+grccore.device.progress.prefix=Прогресс:
+grccore.waila.option.DisplayFluidContent=Жидкостные резервуары
+grccore.waila.option.DisplayHeated=Нагретое оборудование
+
+# Effects
+grc.effect.chance.format=%d%% шанс на
+grc.effect.extinguish.desc=Тушит горение
+grc.effect.ignite.desc=Поджигает на %dс
+grc.effect.list.head=Применяет следующие эффекты:
+grc.effect.null.desc=Не делает ничего
+grc.effect.random_list.head=Применяет один из следующих эффектов:
+grc.effect.remove_potion_effect.format=Удаляет эффект %s
+grc.effect.weighted_random_list.format=%d%% шанс на
+
+
+# GUI
+gui.grc.progress.format=%s : %d / %d
+
+# Inventory
+grc.inventory.internal.name=Инвентарь
+
+# Tooltips
+grc.tooltip.detailed_information=Удерживайте %s, чтобы показать подробную информацию
+
+# Achievements
+achievement.trusty_hardware=Надёжное оборудование
+achievement.trusty_hardware.desc=Хранить в местах недоступных для Эндермена.
+achievement.half_life_confirmed=Half-Life подтвержден!
+achievement.half_life_confirmed.desc=Уничтожьте зомби при помощи монтировки
+achievement.salty_situation=Солёная ситуация
+achievement.salty_situation.desc=Наполните ведро солёной водой

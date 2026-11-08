@@ -1,0 +1,113 @@
+# Creative Tabs
+itemGroup.creative_tab_grccellar=Growthcraft: Погреб
+
+# Blocks
+tile.grc.fruitPress.name=Плодовый пресс
+tile.grc.fruitPresser.name=Плодовый пресс
+tile.grc.brewKettle.name=Сусловарочный котёл
+tile.grc.fermentBarrel.name=Бочка для брожения
+tile.grc.fermentJar.name=Банка для брожения
+
+# Items
+# Please remove this field once all other module translations have been updated,
+# this is no longer used
+item.grc.boozeBucket.name=Ведро
+
+item.grc.yeast0.name=Пивные дрожжи
+item.grc.yeast1.name=Лагерные дрожжи
+item.grc.yeast2.name=Винные дрожжи
+item.grc.yeast3.name=Эфирные дрожжи
+item.grc.yeast4.name=Обыкновенные дрожжи
+
+# Water Bags
+item.grc.waterBag0.name=Фляжка (Белая)
+item.grc.waterBag1.name=Фляжка (Оранжевая)
+item.grc.waterBag2.name=Фляжка (Пурпурная)
+item.grc.waterBag3.name=Фляжка (Голубая)
+item.grc.waterBag4.name=Фляжка (Жёлтая)
+item.grc.waterBag5.name=Фляжка (Лаймовая)
+item.grc.waterBag6.name=Фляжка (Розовая)
+item.grc.waterBag7.name=Фляжка (Серая)
+item.grc.waterBag8.name=Фляжка (Светло-серая)
+item.grc.waterBag9.name=Фляжка (Бирюзовая)
+item.grc.waterBag10.name=Фляжка (Фиолетовая)
+item.grc.waterBag11.name=Фляжка (Синяя)
+item.grc.waterBag12.name=Фляжка (Коричневая)
+item.grc.waterBag13.name=Фляжка (Зелёная)
+item.grc.waterBag14.name=Фляжка (Красная)
+item.grc.waterBag15.name=Фляжка (Чёрная)
+item.grc.waterBag16.name=Фляжка
+
+# Containers
+container.grc.fruitPress=Плодовый пресс
+container.grc.brewKettle=Сусловарочный котёл
+container.grc.fermentBarrel=Бочка для брожения
+container.grc.CultureJar=Банка для брожения
+
+# Other
+grc.potion.tipsy=Опьянение
+grc.booze=Алкоголь
+
+# Modifiers
+grc.fluids.tag.chilled=Лагер
+grc.fluids.tag.cider=Сидр
+grc.fluids.tag.deadly=Смертельный
+grc.fluids.tag.extended=Длительный
+grc.fluids.tag.fermented=Бродящий
+grc.fluids.tag.fortified=Крепленый
+grc.fluids.tag.hopped=Хмельной
+grc.fluids.tag.hyper_extended=Сверхдлительный
+grc.fluids.tag.intoxicated=Опьяняющий
+grc.fluids.tag.magical=Магический
+grc.fluids.tag.poisoned=Отравленный
+grc.fluids.tag.potent=Крепкий
+grc.fluids.tag.wine=Вино
+grc.fluids.tag.young=Молодой
+
+# GUI
+gui.grc.empty=Пусто
+gui.grc.discard=Вылить
+gui.grc.switch=Переключить
+gui.grc.cantferment=Нельзя начать брожение.
+gui.grccellar.ferment_barrel.progress_name=Брожение
+
+# Achievements
+achievement.craftBarrel=Добыча алкоголя
+achievement.craftBarrel.desc=Сделайте бочку для брожения из трёх деревянных досок и шести железных слитков.
+achievement.fermentBooze=Это дрожжи, я мог бы сделать...
+achievement.fermentBooze.desc=Сбродите алкогольный напиток.
+achievement.getDrunk=Пивоварение - это проблема?
+achievement.getDrunk.desc=Получите опьянение V.
+achievement.onTheGo=На ходу
+achievement.onTheGo.desc=Сделайте фляжку
+
+# Tooltips (Number is a percentage)
+# number is a percentage
+grc.cellar.format.waterBag.name=%s (%s)
+grc.cellar.format.fluid_container.contents=Содержит: %1$s (%2$dмВ/%3$dМв)
+grc.cellar.format.tipsy_chance=Шанс опьянения: %d%%
+grc.cellar.item.booze_bucket.deprecated=УСТАРЕЛО, положите в сетку создания, чтобы обновить
+grc.cellar.item.booze_bucket.deprecated_suffix= (УСТАРЕЛО)
+
+grc.cellar.brew_kettle.brewing_prefix=Варка:
+grc.cellar.brew_kettle.itemslot.item=Предмет: %s
+grc.cellar.brew_kettle.itemslot.residue=Остаток: %s
+grc.cellar.ferment_barrel.itemslot.modifier=Модификатор: %s
+grc.cellar.ferment_jar.itemslot.yeast=%s
+grc.cellar.fruit_press.itemslot.item=Предмет: %s
+grc.cellar.fruit_press.itemslot.residue=Остаток: %s
+grc.cellar.fruit_presser.state.invalid=<Invalid>
+grc.cellar.fruit_presser.state.pressed=Прессуется
+grc.cellar.fruit_presser.state.unpressed=Не спрессовано
+grc.cellar.fruit_presser.state_prefix=Состояние:
+
+# Waila Tooltips
+grccellar.waila.option.FruitPressExtras=Плодовый пресс дополнительно
+grccellar.waila.option.BrewKettleExtras=Сусловарочный котёл дополнительно
+grccellar.waila.option.FermentBarrelExtras=Бочка для брожения дополнительно
+
+# NEI
+grc.recipe_handler.brew_kettle=Сусловарочный котёл
+grc.recipe_handler.culture_jar=Банка для брожения
+grc.recipe_handler.ferment_barrel=Бочка для брожения
+grc.recipe_handler.fruit_press=Плодовый пресс

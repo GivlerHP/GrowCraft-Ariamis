@@ -1,0 +1,109 @@
+# Creative Tabs
+itemGroup.creative_tab_grccellar=Growthcraft Keller
+
+# Blocks
+tile.grc.fruitPress.name=Fruchtpresse
+tile.grc.fruitPresser.name=Fruchtpresse
+tile.grc.brewKettle.name=Braukessel
+tile.grc.fermentBarrel.name=Gärungsfass
+tile.grc.fermentJar.name=Kulturglas
+
+# Items
+# Please remove this field once all other module translations have been updated,
+# this is no longer used
+item.grc.boozeBucket.name=Eimer
+
+
+
+# Water Bags
+item.grc.waterBag0.name=Water Bag (Weiß)
+item.grc.waterBag1.name=Water Bag (Orange)
+item.grc.waterBag2.name=Water Bag (Magenta)
+item.grc.waterBag3.name=Water Bag (Hellblau)
+item.grc.waterBag4.name=Water Bag (Gelb)
+item.grc.waterBag5.name=Water Bag (Lime)
+item.grc.waterBag6.name=Water Bag (Pink)
+item.grc.waterBag7.name=Water Bag (Grau)
+item.grc.waterBag8.name=Water Bag (Hellgrau)
+item.grc.waterBag9.name=Water Bag (Cyan)
+item.grc.waterBag10.name=Water Bag (Lila)
+item.grc.waterBag11.name=Water Bag (Blau)
+item.grc.waterBag12.name=Water Bag (Braun)
+item.grc.waterBag13.name=Water Bag (Grün)
+item.grc.waterBag14.name=Water Bag (Rot)
+item.grc.waterBag15.name=Water Bag (Schwarz)
+item.grc.waterBag16.name=Water Bag
+
+# Containers
+container.grc.fruitPress=Fruchtpresse
+container.grc.brewKettle=Braukessel
+container.grc.fermentBarrel=Gärungsfass
+container.grc.CultureJar=Kulturglas
+
+# Other
+grc.potion.tipsy=Angetrunken
+grc.booze=Alkohol
+
+# Modifiers
+grc.fluids.tag.chilled=Lagered
+grc.fluids.tag.cider=Apfelwein
+grc.fluids.tag.deadly=Tödlich
+grc.fluids.tag.extended=Verlängert
+grc.fluids.tag.fermented=Gegärt
+grc.fluids.tag.fortified=Angereichert
+grc.fluids.tag.hopped=Gehopft
+grc.fluids.tag.hyper_extended=Hyper-verlängert
+grc.fluids.tag.intoxicated=Betrunken
+grc.fluids.tag.magical=Magisch
+grc.fluids.tag.poisoned=Vergiftet
+grc.fluids.tag.potent=Potent
+grc.fluids.tag.wine=Wein
+grc.fluids.tag.young=Jung
+
+# GUI
+gui.grc.empty=Leer
+gui.grc.discard=Leeren
+gui.grc.switch=Tauschen
+gui.grc.cantferment=Kann nicht gären
+gui.grccellar.ferment_barrel.progress_name=Am Gären
+
+# Achievements
+achievement.craftBarrel=Ein Fass aufmachen
+achievement.craftBarrel.desc=achievement.craftBarrel.desc=Stelle ein Gärungsfass mit drei Holzplanken und sechs Eisenbarren her.
+achievement.fermentBooze=Was soll sich klären, muss erst gären
+achievement.fermentBooze.desc=Stelle Alkohol durch Gärung her.
+achievement.getDrunk=Es braut sich etwas zusammen
+achievement.getDrunk.desc=Erreiche Angetrunkenheit V.
+achievement.onTheGo=Für unterwegs
+achievement.onTheGo.desc=Stelle eine Water Bag her.
+
+# Tooltips (Number is a percentage)
+# number is a percentage
+grc.cellar.format.waterBag.name=%s (%s)
+grc.cellar.format.fluid_container.contents=Contains: %2$dmB/%3$dmB von %1$s
+grc.cellar.format.tipsy_chance=%d%% Chance auf Angetrunkenheit
+grc.cellar.item.booze_bucket.deprecated=VERALTET, craften, um den aktuellen Eimer zu erhalten
+grc.cellar.item.booze_bucket.deprecated_suffix= (VERALTET)
+
+grc.cellar.brew_kettle.brewing_prefix=Brauen:
+grc.cellar.brew_kettle.itemslot.item=Gegenstand: %s
+grc.cellar.brew_kettle.itemslot.residue=Restmenge: %s
+grc.cellar.ferment_barrel.itemslot.modifier=Modifikator: %s
+grc.cellar.ferment_jar.itemslot.yeast=%s
+grc.cellar.fruit_press.itemslot.item=Gegenstand: %s
+grc.cellar.fruit_press.itemslot.residue=Restmenge: %s
+grc.cellar.fruit_presser.state.invalid=<Ungültig>
+grc.cellar.fruit_presser.state.pressed=gepresst
+grc.cellar.fruit_presser.state.unpressed=ungepresst
+grc.cellar.fruit_presser.state_prefix=Status:
+
+# Waila Tooltips
+grccellar.waila.option.FruitPressExtras=Fruchtpresse Extras
+grccellar.waila.option.BrewKettleExtras=Braukessel Extras
+grccellar.waila.option.FermentBarrelExtras=Gärungsfass Extras
+
+# NEI
+grc.recipe_handler.brew_kettle=Braukessel
+grc.recipe_handler.culture_jar=Kulturglas
+grc.recipe_handler.ferment_barrel=Gärungsfass
+grc.recipe_handler.fruit_press=Fruchtpresse

@@ -1,0 +1,49 @@
+# Blocks
+tile.grc.hopVine.name=Houblon commun
+
+# Items
+item.grc.hops.name=Houblon commun
+item.grc.hopSeeds.name=Graine d'houbon commun
+
+# Fluids
+fluid.grc.hopAle0=Bière
+fluid.grc.hopAle1=Bière
+fluid.grc.hopAle2=Bière
+fluid.grc.hopAle3=Bière
+fluid.grc.hopAle4=Bière
+fluid.grc.hopAle5=Bière
+fluid.grc.hopAle6=Bière
+fluid.grc.hopAle7=Bière
+fluid.grc.hopAle8=Bière
+
+
+
+# Fluid Buckets
+item.bucket.fluid.grc.hopAle0.name=Seau de bière
+item.bucket.fluid.grc.hopAle1.name=Seau de bière
+item.bucket.fluid.grc.hopAle2.name=Seau de bière
+item.bucket.fluid.grc.hopAle3.name=Seau de bière
+item.bucket.fluid.grc.hopAle4.name=Seau de bière
+item.bucket.fluid.grc.hopAle5.name=Seau de bière
+item.bucket.fluid.grc.hopAle6.name=Seau de bière
+item.bucket.fluid.grc.hopAle7.name=Seau de bière
+item.bucket.fluid.grc.hopAle8.name=Seau de bière
+
+
+
+# Fluid Blocks
+tile.fluid.grc.hopAle.name=Bière
+tile.fluid.grc.hopAle0.name=Bière
+tile.fluid.grc.hopAle1.name=Bière
+tile.fluid.grc.hopAle2.name=Bière
+tile.fluid.grc.hopAle3.name=Bière
+tile.fluid.grc.hopAle4.name=Bière
+tile.fluid.grc.hopAle5.name=Bière
+tile.fluid.grc.hopAle6.name=Bière
+tile.fluid.grc.hopAle7.name=Bière
+tile.fluid.grc.hopAle8.name=Bière
+
+
+
+# Fluid Tooltips
+fluid.grc.hopAle4.modifier=Sans houblon, Nouvelle

@@ -151,10 +151,10 @@ public class BlockFermentBarrel extends BlockCellarContainer
 	{
 		this.icons = new IIcon[4];
 		final String basename = getTextureName();
-		icons[0] = reg.registerIcon(String.format("%s/minecraft/oak/side", basename));
-		icons[1] = reg.registerIcon(String.format("%s/minecraft/oak/side_alt", basename));
-		icons[2] = reg.registerIcon(String.format("%s/minecraft/oak/top", basename));
-		icons[3] = reg.registerIcon(String.format("%s/minecraft/oak/bottom", basename));
+		icons[0] = reg.registerIcon("grccellar:ferment_barrel/cube_side");
+		icons[1] = icons[0];
+		icons[2] = reg.registerIcon("grccellar:ferment_barrel/cube_top");
+		icons[3] = icons[2];
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -169,15 +169,15 @@ public class BlockFermentBarrel extends BlockCellarContainer
 	{
 		if (meta == 0 || meta == 1)
 		{
-			return side == 0 || side == 1 ? icons[1] : icons[0];
+			return side == 0 || side == 1 ? icons[2] : icons[0];
 		}
 		else if (meta == 2 || meta == 3)
 		{
-			return side == 2 || side == 3 ? icons[1] : icons[0];
+			return side == 2 || side == 3 ? icons[2] : icons[0];
 		}
 		else if (meta == 4 || meta == 5)
 		{
-			return side == 4 || side == 5 ? icons[1] : icons[0];
+			return side == 4 || side == 5 ? icons[2] : icons[0];
 		}
 		return icons[0];
 	}
@@ -204,7 +204,7 @@ public class BlockFermentBarrel extends BlockCellarContainer
 	@SideOnly(Side.CLIENT)
 	public boolean shouldSideBeRendered(IBlockAccess world, int x, int y, int z, int side)
 	{
-		return true;
+		return super.shouldSideBeRendered(world, x, y, z, side);
 	}
 
 	/************
